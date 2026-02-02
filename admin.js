@@ -17,10 +17,13 @@ function simpanData(){
 function tambahArsip(){
   arsip.push({
     judul: arsipJudul.value,
-    link: arsipLink.value
+    link: normalizeUrl(arsipLink.value),
+    bulan: arsipBulan.value   // contoh: 2026-02
   });
+
   arsipJudul.value = '';
   arsipLink.value = '';
+  arsipBulan.value = '';
   renderArsip();
 }
 
