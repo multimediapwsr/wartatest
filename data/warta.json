@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "tanggal": "",
+    "gerejawi": "",
+    "pdf": ""
+  },
+  "ibadah": [
+    {
+      "jam": "10:00",
+      "tempat": "Induk",
+      "pelayan": "Saya",
+      "musik": "saya",
+      "singer": "saya",
+      "mazmur": "saya"
+    }
+  ],
+  "sekolah": [
+    {
+      "jam": "10:00",
+      "kelas": "sya",
+      "tempat": "saya",
+      "pelayan": "bjdhdsv"
+    }
+  ],
+  "kelompok": [
+    {
+      "nama": "jsjj",
+      "tempat": "hw",
+      "pelayan": "ysy"
+    },
+    {
+      "nama": "qhqywy",
+      "tempat": "ydygv",
+      "pelayan": "ydyvys"
+    }
+  ],
+  "pemasukan": [
+    {
+      "uraian": "masuk",
+      "nominal": "1.000.000"
+    }
+  ],
+  "pengeluaran": [
+    {
+      "uraian": "keluar",
+      "nominal": "1.000.000"
+    }
+  ],
+  "pos": [
+    {
+      "nama": "masuk",
+      "saldo": "1.000.000"
+    }
+  ],
+  "persembahan": [
+    {
+      "kelompok": "saya",
+      "l": "1",
+      "p": "2",
+      "gereja": "20.000",
+      "bangunan": "20.000",
+      "pos": "20.000"
+    }
+  ],
+  "info": [
+    {
+      "teks": "bhjchg jgdhew",
+      "warna": "red"
+    }
+  ]
+}
