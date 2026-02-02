@@ -1,6 +1,47 @@
 const data = JSON.parse(localStorage.getItem('wartaData'));
 const arsip = JSON.parse(localStorage.getItem('arsipWarta')) || [];
 const ul = document.getElementById('arsipList');
+const selectBulan = document.getElementById('filterBulan');
+const arsipList = document.getElementById('arsipList');
+
+function initArsip(){
+  const bulanSet = new Set(arsip.map(a=>a.bulan));
+  bulanSet.forEach(b=>{
+    const opt = document.createElement('option');
+    opt.value = b;
+    opt.text = formatBulan(b);
+    selectBulan.appendChild(opt);
+  });
+}
+
+function renderArsipFilter(){
+  const bulan = selectBulan.value;
+  arsipList.innerHTML = '';
+
+  arsip
+    .filter(a=>!bulan || a.bulan === bulan)
+    .forEach(a=>{
+      arsipList.innerHTML += `
+        <li>
+          <span>${a.judul}</span>
+          <a href="${a.link}" target="_blank">Download</a>
+        </li>
+      `;
+    });
+}
+
+function formatBulan(b){
+  const [y,m] = b.split('-');
+  const namaBulan = [
+    'Januari','Februari','Maret','April','Mei','Juni',
+    'Juli','Agustus','September','Oktober','November','Desember'
+  ];
+  return `${namaBulan[parseInt(m)-1]} ${y}`;
+}
+
+initArsip();
+renderArsipFilter();
+
 
 arsip.forEach(a=>{
   ul.innerHTML += `
