@@ -1,4 +1,3 @@
-let arsip = JSON.parse(localStorage.getItem('arsipWarta')) || [];
 /* ===============================
    AMBIL ELEMEN FORM (WAJIB)
 ================================ */
@@ -112,48 +111,3 @@ function simpan() {
   a.download = "warta.json";
   a.click();
 }
-
-
-function normalizeUrl(url){
-  if(!url) return '';
-
-  if(
-    !url.startsWith('http://') &&
-    !url.startsWith('https://')
-  ){
-    return 'https://' + url;
-  }
-  return url;
-}
-
-function tambahArsip(){
-  arsip.push({
-    judul: arsipJudul.value,
-    link: normalizeUrl(arsipLink.value),
-    bulan: arsipBulan.value   // contoh: 2026-02
-  });
-
-  arsipJudul.value = '';
-  arsipLink.value = '';
-  arsipBulan.value = '';
-  renderArsip();
-}
-
-function renderArsip(){
-  listArsip.innerHTML = '';
-  arsip.forEach((a,i)=>{
-    listArsip.innerHTML += `
-      <li>
-        ${a.judul}
-        <button onclick="hapusArsip(${i})">❌</button>
-      </li>
-    `;
-  });
-}
-
-function hapusArsip(i){
-  arsip.splice(i,1);
-  renderArsip();
-}
-
-renderArsip();
