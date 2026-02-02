@@ -146,3 +146,44 @@ th,td { border:1px solid #ddd; padding:8px }
   right:10px;
   cursor:pointer;
 }
+
+.arsip-card{
+  max-width:600px;
+  margin:20px auto;
+}
+
+#filterBulan{
+  width:100%;
+  padding:10px;
+  margin:10px 0 15px;
+  border-radius:8px;
+}
+
+.arsip-list{
+  list-style:none;
+  padding:0;
+}
+
+.arsip-list li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#f8f9fa;
+  padding:12px 15px;
+  margin-bottom:10px;
+  border-radius:8px;
+}
+
+.arsip-list a{
+  background:#3498db;
+  color:white;
+  padding:6px 12px;
+  border-radius:20px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.arsip-list a:hover{
+  background:#2c80b4;
+}
+
