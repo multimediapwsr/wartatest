@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Admin Warta Gereja</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<h1>🛠️ Admin Warta Gereja</h1>
+
+<!-- HEADER -->
+<div class="card">
+  <h2>Header Warta</h2>
+  <input id="namaGereja" placeholder="Nama Gereja">
+  <input id="tglGerejawi" placeholder="Tanggal Gerejawi">
+  <input id="linkWarta" placeholder="Link PDF Warta Hari Ini">
+</div>
+
+<!-- ISI WARTA -->
+<div class="card">
+  <h2>Isi Warta (HTML Bebas)</h2>
+  <textarea id="isiWarta" rows="10"
+    placeholder="Masukkan HTML isi warta"></textarea>
+</div>
+
+<!-- ARSIP -->
+<div class="card">
+  <h2>Arsip Warta</h2>
+
+  <input id="arsipJudul" placeholder="Judul Arsip">
+  <input id="arsipLink" placeholder="Link PDF Arsip">
+
+  <button onclick="tambahArsip()">➕ Tambah Arsip</button>
+
+  <ul id="listArsip"></ul>
+</div>
+
+<button class="save" onclick="simpanData()">💾 Simpan Semua</button>
+
+<script src="admin.js"></script>
+</body>
+</html>
