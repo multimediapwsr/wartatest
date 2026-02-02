@@ -27,12 +27,7 @@ if(localStorage.getItem('adminLogin') !== 'true'){
 <h1>🛠️ Admin Warta Gereja</h1>
 
 <!-- HEADER -->
-<div class="card">
-  <h2>Header Warta</h2>
-  <input id="namaGereja" placeholder="Nama Gereja">
-  <input id="tglGerejawi" placeholder="Tanggal Gerejawi">
-  <input id="linkWarta" placeholder="Link PDF Warta Hari Ini">
-</div>
+
 
 <!-- ================= PELAYAN IBADAH ================= -->
 <div class="section">
@@ -115,21 +110,6 @@ if(localStorage.getItem('adminLogin') !== 'true'){
 </div>
 
 <button onclick="simpan()" style="font-size:18px;">💾 SIMPAN WARTA</button>
-
-<!-- ARSIP -->
-<div class="card">
-  <h2>Arsip Warta</h2>
-
-<input id="arsipJudul" placeholder="Judul Arsip">
-<input id="arsipLink" placeholder="Link PDF">
-<input id="arsipBulan" placeholder="Bulan (contoh: 2026-02)">
-
-<button onclick="tambahArsip()">➕ Tambah Arsip</button>
-
-  <ul id="listArsip"></ul>
-</div>
-
-<button class="save" onclick="simpan()">💾 Simpan Semua</button>
 
   <button onclick="logout()" style="float:right">Logout</button>
 
