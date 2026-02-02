@@ -7,6 +7,14 @@
 </head>
 <body>
 
+  <!-- validasi login -->
+  <script>
+if(localStorage.getItem('adminLogin') !== 'true'){
+  window.location.href = 'login.html';
+}
+</script>
+
+  
 <h1>🛠️ Admin Warta Gereja</h1>
 
 <!-- HEADER -->
@@ -39,6 +47,17 @@
 
 <button class="save" onclick="simpanData()">💾 Simpan Semua</button>
 
+  <button onclick="logout()" style="float:right">Logout</button>
+
+  <!-- logout-->
+<script>
+function logout(){
+  localStorage.removeItem('adminLogin');
+  window.location.href = 'login.html';
+}
+</script>
+
+  
 <script src="admin.js"></script>
 </body>
 </html>
