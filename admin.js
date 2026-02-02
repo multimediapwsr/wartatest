@@ -84,21 +84,25 @@ function tambahInfo() {
 /* ===============================
    SIMPAN DATA (INI YANG ERROR TADI)
 ================================ */
+function val(el) {
+  return el ? el.value : "";
+}
+
 function simpan() {
   const data = {
     meta: {
-      tanggal: tanggal.value || "",
-      gerejawi: gerejawi.value || "",
-      pdf: pdf.value || ""
+      tanggal: val(tanggal),
+      gerejawi: val(gerejawi),
+      pdf: val(pdf)
     },
-    ibadah: ambil(ibadah, ["jam","tempat","pelayan","musik","singer","mazmur"]),
-    sekolah: ambil(sekolah, ["jam","kelas","tempat","pelayan"]),
-    kelompok: ambil(kelompok, ["nama","tempat","pelayan"]),
-    pemasukan: ambil(pemasukan, ["uraian","nominal"]),
-    pengeluaran: ambil(pengeluaran, ["uraian","nominal"]),
-    pos: ambil(pos, ["nama","saldo"]),
-    persembahan: ambil(persembahan, ["kelompok","l","p","gereja","bangunan","pos"]),
-    info: ambil(info, ["teks","warna"])
+    ibadah: ibadah ? ambil(ibadah, ["jam","tempat","pelayan","musik","singer","mazmur"]) : [],
+    sekolah: sekolah ? ambil(sekolah, ["jam","kelas","tempat","pelayan"]) : [],
+    kelompok: kelompok ? ambil(kelompok, ["nama","tempat","pelayan"]) : [],
+    pemasukan: pemasukan ? ambil(pemasukan, ["uraian","nominal"]) : [],
+    pengeluaran: pengeluaran ? ambil(pengeluaran, ["uraian","nominal"]) : [],
+    pos: pos ? ambil(pos, ["nama","saldo"]) : [],
+    persembahan: persembahan ? ambil(persembahan, ["kelompok","l","p","gereja","bangunan","pos"]) : [],
+    info: info ? ambil(info, ["teks","warna"]) : []
   };
 
   const blob = new Blob(
