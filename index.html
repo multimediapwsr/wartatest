@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Warta Jemaat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <img src="logo.png" class="logo">
+
+  <div>
+    <h1 id="namaGereja">Nama Gereja</h1>
+    <p id="tanggal"></p>
+    <p id="tglGerejawi">Tanggal Gerejawi</p>
+  </div>
+
+  <button class="hamburger" onclick="openSidebar()">☰</button>
+</header>
+
+<nav id="sidebar" onclick="event.stopPropagation()">
+  <button class="close-btn" onclick="closeSidebar()">✖</button>
+  <a onclick="showSection('warta')">📄 Warta Hari Ini</a>
+  <a onclick="showSection('arsip')">⬇ Arsip Warta</a>
+</nav>
+
+<div id="overlay" onclick="closeSidebar()"></div>
+
+
+
+<!-- KONTEN -->
+<main>
+<!-- ISI WARTA -->
+<section id="warta" class="page active">
+  <div id="isiWarta"></div>
+
+  <div class="download-wrapper">
+    <button class="download-btn" onclick="downloadWarta()">
+      ⬇ Download Warta Hari Ini
+    </button>
+  </div>
+</section>
+
+<section id="arsip" class="page">
+  <div class="card">
+    <h2>Arsip Warta</h2>
+<ul id="arsipList"></ul>
+  </div>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
