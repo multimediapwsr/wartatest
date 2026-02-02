@@ -187,3 +187,9 @@ th,td { border:1px solid #ddd; padding:8px }
   background:#2c80b4;
 }
 
+.total td {
+    background: var(--kuning);
+    font-weight: bold;
+    font-size: 16px;
+    border-top: 3px solid #f0ad4e;
+}
