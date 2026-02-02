@@ -13,7 +13,7 @@ arsip.forEach(a=>{
 if(data){
   document.querySelector('h1').innerText = data.namaGereja;
   document.getElementById('tglGerejawi').innerText = data.tglGerejawi;
-  document.getElementById('warta').innerHTML = data.isiWarta;
+  document.getElementById('isiWarta').innerHTML = data.isiWarta;
 }
 
 function toggleSidebar(){
