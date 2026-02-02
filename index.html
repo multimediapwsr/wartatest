@@ -42,13 +42,21 @@
     </button>
   </div>
 </section>
+  
+<!-- ARSIP -->
+  <section id="arsip" class="page">
+  <div class="card arsip-card">
+    <h2>📂 Arsip Warta</h2>
 
-<section id="arsip" class="page">
-  <div class="card">
-    <h2>Arsip Warta</h2>
-<ul id="arsipList"></ul>
+    <select id="filterBulan" onchange="renderArsipFilter()">
+      <option value="">-- Pilih Bulan --</option>
+    </select>
+
+    <ul id="arsipList" class="arsip-list"></ul>
   </div>
 </section>
+
+  
 </main>
 
 <script src="script.js"></script>
