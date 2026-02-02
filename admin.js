@@ -60,20 +60,6 @@ function simpan(){
   a.click();
 }
 
-
-function simpanData(){
-  const data = {
-    namaGereja: namaGereja.value,
-    tglGerejawi: tglGerejawi.value,
-    linkWarta: linkWarta.value,
-    isiWarta: isiWarta.value
-  };
-
-  localStorage.setItem('wartaData', JSON.stringify(data));
-  localStorage.setItem('arsipWarta', JSON.stringify(arsip));
-
-  alert('Data warta berhasil disimpan');
-}
 function normalizeUrl(url){
   if(!url) return '';
 
