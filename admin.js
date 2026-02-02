@@ -13,6 +13,17 @@ function simpanData(){
 
   alert('Data warta berhasil disimpan');
 }
+function normalizeUrl(url){
+  if(!url) return '';
+
+  if(
+    !url.startsWith('http://') &&
+    !url.startsWith('https://')
+  ){
+    return 'https://' + url;
+  }
+  return url;
+}
 
 function tambahArsip(){
   arsip.push({
